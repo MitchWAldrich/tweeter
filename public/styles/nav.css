@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+span {
+  display: flex;
+  font-family: Bungee, sans-serif;
+  align-self: center;
+}
