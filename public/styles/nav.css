@@ -3,6 +3,8 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100%;
+  position: absolute;
+  z-index: 9;
   padding-left: 1.5em;
   padding-right: 1.5em;
   background-color: #4056A1;
@@ -15,7 +17,7 @@ nav {
   font-family: Bungee, sans-serif;
   font-size: 30px;
 }
-.header-right {
+.nav-right {
   display: flex;
   flex-direction: column;
   align-items: center;
