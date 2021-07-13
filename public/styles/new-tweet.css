@@ -1,0 +1,49 @@
+button {
+  font-family: bungee;
+  background-color: #4056A1;
+  color: white;
+}
+main {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ label {
+   display: flex;
+ }
+#tweet-text {
+  display: flex;
+  align-items: stretch;
+  z-index: 8;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  height: 20px;
+  width: 100%;
+  border-bottom: solid;
+}
+
+.tweet-submit {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* flex-direction: column; */
+  justify-content: stretch;
+}
+
+.counter {
+  display: flex;
+  font-weight: bold;
+  
+}
