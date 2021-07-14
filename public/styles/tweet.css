@@ -11,6 +11,18 @@ article.tweet header {
   opacity: 0.5;
 }
 
+.fa-flag:hover {
+  color: goldenrod;
+}
+
+.fa-heart:hover {
+  color: goldenrod;
+}
+
+.fa-retweet:hover {
+  color: goldenrod;
+}
+
 h4 {
   font-size: 20px;
   font-weight: 150;
@@ -42,7 +54,12 @@ p {
 
 .tweet {
   border: solid;
+  margin-bottom: 25px;
   padding: 15px;
+}
+
+.tweet:hover {
+  box-shadow: 12px 12px 2px 1px rgba(167, 167, 185, 0.363);
 }
 
 .user {
