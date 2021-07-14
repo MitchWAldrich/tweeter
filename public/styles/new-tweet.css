@@ -3,15 +3,15 @@ button {
   background-color: #4056A1;
   color: white;
 }
-main {
+/* main {
   display: flex;
-}
+} */
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
  label {
    display: flex;
  }
@@ -24,17 +24,18 @@ main {
   resize: none;
   height: 20px;
   width: 100%;
-  border-bottom: solid;
 }
 
-.tweet-submit {
+footer {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-top: 10px;
+  border-top: solid;
+  /* margin-top: 10px; */
+  /* margin-bottom: 40px; */
 }
 
-section {
+.new-tweet {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -46,4 +47,9 @@ section {
   display: flex;
   font-weight: bold;
   
+}
+
+.tweet-submit {
+  margin-bottom: 40px;
+  padding-top: 10px;
 }

@@ -31,4 +31,6 @@ body {
    width: 90%;
    background-color: #f4f1ec;
    align-self: center;
+   flex-direction: column;
+   justify-content: center;
  }

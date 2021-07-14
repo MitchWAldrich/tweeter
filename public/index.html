@@ -56,10 +56,10 @@
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
-          <div class ="tweet-submit">
+          <footer class ="tweet-submit">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
+          </footer>
         </form>
       </section>
       <section class="tweet-container">
@@ -69,12 +69,12 @@
             <img class="avatar" src="/images/profile-boy.png">
             <h4>Full name</h4>
             </div>
-            <h4>Handle</h4>
+            <h4 id="handle">@Handle</h4>
           </header>
           <h5>Tweet (probably in another element?)</h5>
           <footer>
-            <h6>Time ago</h6>
-            <h6>symbols</h6>
+            <p>Time ago</p>
+            <p>symbols</p>
           </footer>
         </article>
       </section>

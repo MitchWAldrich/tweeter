@@ -1,0 +1,45 @@
+article.tweet header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+  opacity: 0.5;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 150;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  margin: 15px;
+  font-size: 16px;
+}
+
+#handle {
+  color: rgb(166, 196, 228);
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.tweet {
+  border: solid;
+  padding: 15px;
+}
+
+.user {
+  display: flex;
+  font-weight: 200;
+}
