@@ -1,4 +1,4 @@
-header {
+.profile {
   display: flex;
   position: relative;
   height: 400px;
@@ -8,14 +8,7 @@ header {
   align-items: center;
   background-color: lightblue;
   background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
-
-}
-
-.profile {
-  display: flex;
   padding-top: 68px;
-  flex-direction: column;
-  align-items: center;
 }
 img {
   display: flex;
