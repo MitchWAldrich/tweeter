@@ -3,7 +3,8 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 9;
   padding-left: 1.5em;
   padding-right: 1.5em;
