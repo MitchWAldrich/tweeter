@@ -32,7 +32,7 @@ $(document).ready(function() {
     </header>
     <h5>${text}</h5>
     <footer>
-      <p>${created_at}</p>
+      <p>${timeago.format(created_at)}</p>
       <div id="icons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
