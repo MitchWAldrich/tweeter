@@ -43,13 +43,7 @@ const data = [
 $(document).ready(function() {
   console.log('client.js running')
   
-  const renderTweets = function(tweets) {
-    const tweetContainer = $('#tweets-container')
-    tweets.forEach(tweet => {
-      tweetContainer.append(createTweetElement(tweet))
-    });
-  }
-
+  
   const createTweetElement = function(tweetObj) {
     const { user, content, created_at } = tweetObj;
     const { name, avatars, handle } = user;
@@ -57,31 +51,62 @@ $(document).ready(function() {
     
     const $tweet = $(`<article class=tweet>
     <header>
-      <div class=user>
-      <img class="avatar" src="${avatars}">
-      <h4>${name}</h4>
-      </div>
-      <h4 id="handle">${handle}</h4>
+    <div class=user>
+    <img class="avatar" src="${avatars}">
+    <h4>${name}</h4>
+    </div>
+    <h4 id="handle">${handle}</h4>
     </header>
     <h5>${text}</h5>
     <footer>
-      <p>${timeago.format(created_at)}</p>
-      <div id="icons">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </div>
+    <p>${timeago.format(created_at)}</p>
+    <div id="icons">
+    <i class="fas fa-flag"></i>
+    <i class="fas fa-retweet"></i>
+    <i class="fas fa-heart"></i>
+    </div>
     </footer>
-  </article>`)
-
+    </article>`)
+    
     return $tweet;
   }
+  
+  const renderTweets = function(tweets) {
+    const tweetContainer = $('#tweets-container')
+    tweets.forEach(tweet => {
+      tweetContainer.append(createTweetElement(tweet))
+    });
+  }
 
-  renderTweets(data);
+  // renderTweets(data);
 
   $('form').submit(function(event) {
-
     event.preventDefault();
+    console.log('[prevented Default')
+    const loadTweet = tweets => {
+      // let data = data.serialize();
+      console.log('load tweet')
+      const params = {
+        type: "POST",
+        url: '/tweets',
+        data: data
+      } 
+      console.log('data2', data)
+      {$.ajax(params)
+        .then((tweets)=>{
+          console.log(`tweets: ${tweet}`)
+          renderTweets(tweets, 3)
+        })
+        .catch((err)=>{
+          console.log(`err loading tweets: ${JSON.stringify(err)}`)
+        })
+        .always(()=>{
+          console.log(`Always print this. But why?`)
+        })
+      
+      }  
+    }
+    loadTweet()
   })
 
 //   const tweetData = {
