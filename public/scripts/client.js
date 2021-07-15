@@ -3,20 +3,53 @@
 * jQuery is already loaded
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
-let tweetExample = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
+// let tweetExample = {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png",
+//     "handle": "@SirIsaac"
+//   },
+//   "content": {
+//     "text": "If I have seen further it is by standing on the shoulders of giants"
+//   },
+//   "created_at": 1461116232227
+// }
+
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
       "handle": "@SirIsaac"
     },
-  "content": {
+    "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1461116232227
-}
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+]
 
 $(document).ready(function() {
   console.log('client.js running')
+  
+  const renderTweets = function(tweets) {
+    const tweetContainer = $('#tweets-container')
+    tweets.forEach(tweet => {
+      tweetContainer.append(createTweetElement(tweet))
+    });
+  }
+
   const createTweetElement = function(tweetObj) {
     const { user, content, created_at } = tweetObj;
     const { name, avatars, handle } = user;
@@ -44,23 +77,30 @@ $(document).ready(function() {
     return $tweet;
   }
 
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
- }
+  renderTweets(data);
 
-const $tweet = createTweetElement(tweetData);
+  $('form').submit(function(event) {
 
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); 
+    event.preventDefault();
+  })
+
+//   const tweetData = {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png",
+//         "handle": "@SirIsaac"
+//       },
+//     "content": {
+//         "text": "If I have seen further it is by standing on the shoulders of giants"
+//       },
+//     "created_at": 1461116232227
+//  }
+
+// const $tweet = createTweetElement(tweetData);
+
+// // Test / driver code (temporary)
+// console.log($tweet); // to see what it looks like
+// $('#tweets-container').append($tweet); 
 
 });
 
