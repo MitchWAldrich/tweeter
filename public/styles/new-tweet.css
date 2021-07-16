@@ -1,3 +1,4 @@
+/* Mobile Styles */
 button {
   background-color: #4056A1;
   color: white;
@@ -56,4 +57,25 @@ footer {
   height: 30px;
   resize: none;
   width: 100%;
+}
+
+ /* Tablet Styles */
+ @media only screen and (min-width: 768px) {
+
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+body {
+  flex-direction: row;
+}
+
+  main {
+    float: right;
+    margin-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 5em;
+    width: 66.6%;
+  }
 }

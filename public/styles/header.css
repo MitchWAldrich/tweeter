@@ -1,22 +1,44 @@
-.profile {
-  display: flex;
-  position: relative;
-  height: 400px;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: lightblue;
-  background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
-  padding-top: 68px;
-}
-img {
+/* Mobile Styles */
+#head-avatar {
   display: flex;
   height: 185px;
   width: auto;
 }
+
+.profile {
+  align-items: center;
+  background-color: lightblue;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  /* padding-top: 68px; */
+  position: relative;
+  min-width: 100%;
+}
+
+#page-head {
+  width: 100%;
+}
+
 .profile .name {
   display: flex;
   margin: 0px;
-  /* padding-bottom: 200px; */
+}
+
+ /* Tablet Styles */
+ @media only screen and (min-width: 768px) {
+
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  #page-head {
+    float: left;
+    margin-top: 7em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 33.3%;
+  }
 }
