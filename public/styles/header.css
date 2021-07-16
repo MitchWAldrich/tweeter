@@ -11,9 +11,11 @@
   background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 300px;
   justify-content: center;
-  /* padding-top: 68px; */
+  margin-top: 0.6em;
+  padding-bottom: 0.9em;
+  padding-top: 1.7em;
   position: relative;
   min-width: 100%;
 }
@@ -29,7 +31,17 @@
 
  /* Tablet Styles */
  @media only screen and (min-width: 768px) {
+  #page-head {
+    float: left;
+    margin-top: 7em;
+    padding-left: 2em;
+    /* padding-right: 2em; */
+    width: 33.3%;
+  }
 
+  .profile {
+    padding-top: 1em;
+  }
 }
 
 /* Desktop styles */
@@ -38,7 +50,11 @@
     float: left;
     margin-top: 7em;
     padding-left: 2em;
-    padding-right: 2em;
+    /* padding-right: 2em; */
     width: 33.3%;
+  }
+
+  .profile {
+    padding-top: 1em;
   }
 }
