@@ -35,9 +35,10 @@ const postTweet = function(event) {
   } else {
     jQuery.post('/tweets', data)
       .then(function() {
-        // const $tweetContainer = $('#tweets-container')
         $('form').trigger('reset');
         $('#tweet-text').trigger('input');
+        const $tweetsContainer = $('#tweets-container')
+        $tweetsContainer.empty();
         loadTweets();
       })
       .catch((err) => {
