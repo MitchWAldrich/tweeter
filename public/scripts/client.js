@@ -48,17 +48,19 @@ $(document).ready(function () {
     event.preventDefault();
     console.log('prevented Default')
     let data = $(this).serialize();
-    if (data.length > 147) {
+    console.log(data.length)
+    if (data.length > 145) {
       alert('Your tweet is too long!')
-    } else if (data.length < 7 || data === null) {
+    } else if (data.length <= 5 || data === null) {
       alert('There is no tweet to post!')
     } else {
       console.log('data', data)
       console.log('length', data.length)
       jQuery.post('/tweets', data)
-        .then(function () {
+      .then(function () {
+          // const $tweetContainer = $('#tweets-container')
           $('form').trigger('reset');
-          $('#tweet-text').trigger('keypress')
+          $('#tweet-text').trigger('input');
           loadTweets();
         })
         .catch((err) => {
