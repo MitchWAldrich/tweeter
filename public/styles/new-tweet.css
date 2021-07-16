@@ -4,12 +4,6 @@ button {
   font-family: bungee;
 }
 
-/* .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
 .counter {
   display: flex;
   font-weight: bold; 
@@ -29,17 +23,7 @@ footer {
   border-top: solid;
   display: flex;
   justify-content: space-between;
-  /* margin-top: 10px; */
-  /* margin-bottom: 40px; */
 }
-
-/* label {
-  display: flex;
-} */
-
-/* main {
-  display: flex;
-} */
 
 .new-tweet {
   align-items: stretch;
@@ -50,27 +34,12 @@ footer {
 
 #no-tweet {
   align-self: center;
-   /* color: red; */
    display: none;
-   /* font-size: .5em;
-   justify-content: center; */
 }
-
-/* div.error {
-  border: solid;
-  border-color: red;
-  color: red;
-  display: flex;
-  font-size: .75em;
-  justify-content: center;
-} */
 
 #too-long {
   align-self: center;
-  /* color: red; */
   display: none;
-  /* font-size: .5em;
-  justify-content: center; */
 } 
 
 .tweet-submit {
@@ -87,5 +56,4 @@ footer {
   height: 30px;
   resize: none;
   width: 100%;
-  /* z-index: 8; */
 }
