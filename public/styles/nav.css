@@ -1,31 +1,33 @@
-nav {
+.fa-angle-double-down {
+  align-items: center;
+  color: red;
   display: flex;
-  justify-content: space-between;
-  height: 120px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 9;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+}
+
+nav {
+  align-items: center;
   background-color: #4056A1;
   color: #FFFFFF;
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav-right {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
 }
 
 #tweeter {
   display: flex;
   font-family: Bungee, sans-serif;
-  font-size: 30px;
-}
-.nav-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-}
-.fa-angle-double-down {
-  display: flex;
-  color: red;
-  align-items: center;
+  font-size: 1.25em;
 }

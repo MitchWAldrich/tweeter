@@ -1,55 +1,91 @@
 button {
-  font-family: bungee;
   background-color: #4056A1;
   color: white;
+  font-family: bungee;
 }
-/* main {
-  display: flex;
-} */
 
 /* .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 } */
- label {
-   display: flex;
- }
-#tweet-text {
+
+.counter {
   display: flex;
-  align-items: stretch;
-  z-index: 8;
-  background-color: transparent;
-  border: none;
-  resize: none;
-  height: 20px;
-  width: 100%;
+  font-weight: bold; 
+}
+
+div.error {
+  border: solid;
+  border-color: red;
+  color: red;
+  display: flex;
+  font-size: .75em;
+  justify-content: center;
 }
 
 footer {
-  display: flex;
   align-items: stretch;
-  justify-content: space-between;
   border-top: solid;
+  display: flex;
+  justify-content: space-between;
   /* margin-top: 10px; */
   /* margin-bottom: 40px; */
 }
 
+/* label {
+  display: flex;
+} */
+
+/* main {
+  display: flex;
+} */
+
 .new-tweet {
+  align-items: stretch;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  /* flex-direction: column; */
   justify-content: stretch;
 }
 
-.counter {
-  display: flex;
-  font-weight: bold;
-  
+#no-tweet {
+  align-self: center;
+   /* color: red; */
+   display: none;
+   /* font-size: .5em;
+   justify-content: center; */
 }
+
+/* div.error {
+  border: solid;
+  border-color: red;
+  color: red;
+  display: flex;
+  font-size: .75em;
+  justify-content: center;
+} */
+
+#too-long {
+  align-self: center;
+  /* color: red; */
+  display: none;
+  /* font-size: .5em;
+  justify-content: center; */
+} 
 
 .tweet-submit {
   margin-bottom: 40px;
   padding-top: 10px;
+}
+
+#tweet-text {
+  align-items: stretch;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: .75em;
+  height: 30px;
+  resize: none;
+  width: 100%;
+  /* z-index: 8; */
 }

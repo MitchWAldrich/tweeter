@@ -50,9 +50,15 @@ $(document).ready(function () {
     let data = $(this).serialize();
     console.log(data.length)
     if (data.length > 145) {
-      alert('Your tweet is too long!')
+      $('#too-long').slideDown.css('display','block');
+      setTimeout(() => {
+        $('#too-long').css('display','none');
+      }, 2000)
     } else if (data.length <= 5 || data === null) {
-      alert('There is no tweet to post!')
+      $('#no-tweet').css('display','block');
+      setTimeout(() => {
+        $('#no-tweet').css('display','none');
+      }, 2000)
     } else {
       console.log('data', data)
       console.log('length', data.length)
@@ -65,9 +71,6 @@ $(document).ready(function () {
         })
         .catch((err) => {
           console.error(err)
-        })
-        .always(() => {
-          console.log(`Printing this too?`)
         })
     }
   })
@@ -83,9 +86,6 @@ $(document).ready(function () {
         })
         .catch((err) => {
           console.log(`err loading tweets: ${err}`)
-        })
-        .always(() => {
-          console.log(`Always print this. But why?`)
         })
   })
   loadTweets()
