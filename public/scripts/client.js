@@ -23,29 +23,34 @@ const postTweet = function(event) {
   console.log('prevented Default');
   let data = $(this).serialize();
   if (data.length > 145) {
-    $('#too-long').css('display', 'block');
-    setTimeout(() => {
-      $('#too-long').css('display', 'none');
-    }, 2000);
+    errorMessage('#too-long');
   } else if (data.length <= 5 || data === null) {
-    $('#no-tweet').css('display', 'block');
-    setTimeout(() => {
-      $('#no-tweet').css('display', 'none');
-    }, 2000);
+    errorMessage('#no-tweet');
   } else {
     jQuery.post('/tweets', data)
       .then(function() {
-        $('form').trigger('reset');
-        $('#tweet-text').trigger('input');
-        const $tweetsContainer = $('#tweets-container')
-        $tweetsContainer.empty();
-        loadTweets();
+        clearAndUpdate();
       })
       .catch((err) => {
         console.error(err);
       });
   }
 };
+
+const clearAndUpdate = () => {
+  $('form').trigger('reset');
+          $('#tweet-text').trigger('input');
+          const $tweetsContainer = $('#tweets-container')
+          $tweetsContainer.empty();
+          loadTweets();
+}
+
+const errorMessage = (id) => {
+  $(id).slideDown().css('display', 'block');
+      setTimeout(() => {
+        $(id).slideUp();
+      }, 2000)
+    };
 
 const createTweetElement = function(tweetObj) {
   const { user, content, created_at } = tweetObj;
