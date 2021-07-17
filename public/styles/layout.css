@@ -38,20 +38,3 @@ body {
    justify-content: center;
    width: 90%;
  }
-
- /* Tablet Styles */
- @media only screen and (min-width: 768px) {
-
- }
-
- /* Desktop styles */
- @media only screen and (min-width: 1024px) {
-   /* main {
-     float: right;
-     width: 66.6%;
-   } */
-   /* #page-head {
-     float: left;
-     width: 33.3%;
-   } */
- }

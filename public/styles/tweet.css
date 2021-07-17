@@ -67,13 +67,3 @@ p {
   display: flex;
   font-weight: 200;
 }
-
- /* Tablet Styles */
- @media only screen and (min-width: 768px) {
-
-}
-
-/* Desktop styles */
-@media only screen and (mid-width: 1024px) {
-  
-}
