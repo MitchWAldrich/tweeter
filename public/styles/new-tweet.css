@@ -19,6 +19,15 @@ div.error {
   justify-content: center;
 }
 
+div.success {
+  border: solid;
+  border-color: green;
+  color: green;
+  display: flex;
+  font-size: .75em;
+  justify-content: center;
+}
+
 footer {
   align-items: stretch;
   border-top: solid;
@@ -35,7 +44,7 @@ footer {
 
 #no-tweet {
   align-self: center;
-   display: none;
+  display: none;
 }
 
 #too-long {
@@ -46,6 +55,11 @@ footer {
 .tweet-submit {
   margin-bottom: 40px;
   padding-top: 10px;
+}
+
+#tweet-success {
+  align-self: center;
+  display: none;
 }
 
 #tweet-text {

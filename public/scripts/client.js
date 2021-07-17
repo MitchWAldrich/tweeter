@@ -31,9 +31,14 @@ const postTweet = function(event) {
     jQuery.post('/tweets', { text: data })
       .then(function() {
         console.log('posted the tweet')
+        $('#tweet-success').slideDown().css('display', 'block');
+        setTimeout(() => {
+        $('#tweet-success').slideUp();
+        }, 2000)
         $('#tweet-text').val('');
         $('#tweet-text').trigger('input');
         $('#tweets-container').empty();
+        
         loadTweets();
         // clearAndUpdate();
       })
