@@ -2,7 +2,11 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Final Product
+
+!["Successful tweet on a desktop page"](https://github.com/MitchWAldrich/tweeter/blob/master/docs/Tweeter-Successful-Post.png?raw=true)
+
+!["Narrow page layout"](https://github.com/MitchWAldrich/tweeter/blob/master/docs/Tweeter-narrow-layout.png?raw=true)
 
 ## Getting Started
 
