@@ -1,10 +1,9 @@
 $(document).ready(function() {
   console.log('client.js running');
-
-  loadTweets();
-
+  
   $('form').on('submit', postTweet);
-
+  
+  loadTweets();
 });
 
 const loadTweets = (function() {
@@ -21,15 +20,22 @@ const loadTweets = (function() {
 const postTweet = function(event) {
   event.preventDefault();
   console.log('prevented Default');
-  let data = $(this).serialize();
-  if (data.length > 145) {
+  let data = $('#tweet-text').val();  
+  const $tweetsContainer = $('#tweets-container')
+  data = $tweetsContainer.text(data).html();
+  if (data.length > 140) {
     errorMessage('#too-long');
-  } else if (data.length <= 5 || data === null) {
+  } else if (data.length <= 0 || data === null) {
     errorMessage('#no-tweet');
   } else {
-    jQuery.post('/tweets', data)
+    jQuery.post('/tweets', { text: data })
       .then(function() {
-        clearAndUpdate();
+        console.log('posted the tweet')
+        $('#tweet-text').val('');
+        $('#tweet-text').trigger('input');
+        $('#tweets-container').empty();
+        loadTweets();
+        // clearAndUpdate();
       })
       .catch((err) => {
         console.error(err);
@@ -37,27 +43,29 @@ const postTweet = function(event) {
   }
 };
 
-const clearAndUpdate = () => {
-  $('form').trigger('reset');
-          $('#tweet-text').trigger('input');
-          const $tweetsContainer = $('#tweets-container')
-          $tweetsContainer.empty();
-          loadTweets();
-}
 
 const errorMessage = (id) => {
+  loadTweets();
   $(id).slideDown().css('display', 'block');
-      setTimeout(() => {
-        $(id).slideUp();
-      }, 2000)
-    };
+  setTimeout(() => {
+    $(id).slideUp();
+  }, 2000)
+};
+
+const clearAndUpdate = () => {
+  // $('form').trigger('reset');
+  //   $('#tweet-text').trigger('input');
+  //   $('#tweets-container').empty();
+  //   $('#tweets').replaceWith(loadTweets());
+}
 
 const createTweetElement = function(tweetObj) {
   const { user, content, created_at } = tweetObj;
   const { name, avatars, handle } = user;
   const { text } = content;
 
-  const $tweet = $(`<article class=tweet>
+  const $tweet = 
+    $(`<article class=tweet>
     <header>
     <div class=user>
     <img class="avatar" src="${avatars}">
@@ -75,7 +83,7 @@ const createTweetElement = function(tweetObj) {
     </div>
     </footer>
     </article>`);
-
+  
   return $tweet;
 };
 
